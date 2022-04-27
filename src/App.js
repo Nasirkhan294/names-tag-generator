@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import NameTagList from './components/NameTagList'
 import './App.css';
+import UserInput from './components/UserInput';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends Component {
+  state = {
+    names: ['Nasir', 'Yasir', 'Asif', 'Amir']
+  };
+
+  removeName = (clickedIndex) => {
+    const filterCallback = (_, index) => index !== clickedIndex;
+    const newNames = this.state.names.filter(filterCallback);
+    this.setState({names: newNames})
+  }
+
+  addName = (name) => {
+    const newNames = [name, ...this.state.names];
+    this.setState({ names: newNames })
+  }
+  
+
+  render() {
+    return (
+      <div className='App'>
+        <header className='App-header'>
+          <h1>Name Tag Generator:</h1>
+          <UserInput addName={this.addName} />
+          <NameTagList names={this.state.names} removeName={this.removeName} />
+        </header>
+      </div>
+    )
+  }
 }
 
 export default App;
