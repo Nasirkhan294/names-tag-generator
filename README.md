@@ -2,7 +2,7 @@
 
 ## [Live Site](https://react-names-tag-generator.netlify.app/)
 
-### [React Names Tag Generator](https://drive.google.com/file/d/15EkP4oZuuQ30BCBqnSb5bG-af4jmcGO0/view?usp=sharing).
+### [React Names Tag Generator](https://drive.google.com/file/d/15EkP4oZuuQ30BCBqnSb5bG-af4jmcGO0/view?usp=sharing/image.png).
 
 ## Introduction:
 
